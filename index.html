@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mnemonic · Secure Memory Vault</title>
+    <title>MEMLOCK · Secure Digital Memory Vault</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -28,102 +28,82 @@
             <!-- Header -->
             <div class="vault-header">
                 <div class="logo-area">
-                    <div class="logo-icon">🕊️</div>
+                    <div class="logo-icon">🔐</div>
                     <div class="logo-text">
-                        <h1>mnemonic</h1>
-                        <span>secure memory vault</span>
+                        <h1 style="letter-spacing: 1px; text-transform: uppercase;">memlock</h1>
+                        <span>secure digital memory vault</span>
                     </div>
                 </div>
                 <div class="header-right">
-                    <button id="theme-toggle" class="glass-pill"
-                        style="padding: 6px 12px; font-size: 0.75rem; margin-right: 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; cursor: pointer;">Change
-                        Theme</button>
-                    <div class="memory-mood">
-                        <span class="mood-dot"></span>
-                        <span id="header-mood-text">today · nostalgic drift</span>
-                    </div>
-                    <div style="font-size:1.2rem;">🔐</div>
+                    <button id="theme-toggle" class="vault-btn" style="margin-right: 1rem;">Change Theme</button>
+                    <button class="vault-btn primary">Upload Memory</button>
                 </div>
             </div>
 
-            <!-- Memory Grid -->
-            <div class="memory-grid">
-                <!-- Card 1 -->
-                <div class="memory-card">
-                    <div class="card-icon">🌅</div>
-                    <div class="card-title">golden hour</div>
-                    <div class="card-desc">
-                        <span>faded photographs, sunlit laughter</span>
-                        <span style="font-size:0.75rem; color: rgba(255,255,255,0.6);">warm · protected</span>
+            <!-- Workspace -->
+            <div class="workspace-area">
+                <!-- Sidebar -->
+                <aside class="vault-sidebar">
+                    <div class="nav-item active">📂 All Memories</div>
+                    <div class="nav-item">🔒 Time-Locked</div>
+                    <div class="nav-item">🤝 Shared With Me</div>
+                    <div class="nav-item">🏷️ Tags</div>
+                    <div class="storage-info">
+                        <div class="storage-bar">
+                            <div class="storage-fill" style="width: 45%;"></div>
+                        </div>
+                        <span>4.5 GB / 10 GB Encrypted</span>
                     </div>
-                    <div class="floating-symbol">
-                        <span>✨</span> 4 moments
+                </aside>
+
+                <!-- Main Content -->
+                <main class="vault-main">
+                    <!-- Action Bar -->
+                    <div class="action-bar">
+                        <input type="text" placeholder="Search memories, tags, or dates..." class="vault-input">
                     </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="memory-card">
-                    <div class="card-icon">🌫️</div>
-                    <div class="card-title">distant echoes</div>
-                    <div class="card-desc">
-                        <span>blurred silhouettes, fog on glass</span>
-                        <span style="font-size:0.75rem; color: rgba(255,255,255,0.6);">quiet · preserved</span>
+
+                    <!-- Upload Zone -->
+                    <div class="upload-zone">
+                        <div class="upload-icon">📥</div>
+                        <h3>Store a New Memory</h3>
+                        <p>Drag & drop photos, videos, or documents to securely encrypt and lock</p>
                     </div>
-                    <div class="floating-symbol">
-                        <span>🌀</span> 2 fragments
+
+                    <h3 class="section-title">Encrypted Vault</h3>
+
+                    <!-- Memory Grid -->
+                    <div class="memory-grid">
+                        <!-- Item 1 -->
+                        <div class="memory-card">
+                            <div class="card-icon">📷</div>
+                            <div class="card-title">Graduation Day</div>
+                            <div class="card-desc">
+                                <div class="tags-container">
+                                    <span class="tag">#college</span>
+                                    <span class="tag">#family</span>
+                                </div>
+                            </div>
+                            <div class="floating-symbol">
+                                <span>🛡️</span> Secured
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="memory-card locked-card">
+                            <div class="card-icon">⏳</div>
+                            <div class="card-title">Letters to Future Self</div>
+                            <div class="card-desc">
+                                <span>Time-Locked Memory</span>
+                            </div>
+                            <div class="floating-symbol">
+                                <span>🔒</span> Unlocks 2030
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="memory-card">
-                    <div class="card-icon">🌌</div>
-                    <div class="card-title">dreamweave</div>
-                    <div class="card-desc">
-                        <span>indigo feelings, half‑remembered dreams</span>
-                        <span style="font-size:0.75rem; color: rgba(255,255,255,0.6);">deep · encoded</span>
-                    </div>
-                    <div class="floating-symbol">
-                        <span>⭐</span> 7 fragments
-                    </div>
-                </div>
+                </main>
             </div>
 
-            <!-- Second Row -->
-            <div style="display: flex; gap: 1.8rem; margin-top: 0.2rem; flex-wrap: wrap;">
-                <div class="memory-card" style="flex:1; min-width: 200px;">
-                    <div class="card-icon">🌸</div>
-                    <div class="card-title">tender years</div>
-                    <div class="card-desc">
-                        <span>pastel whispers, rose beige tones</span>
-                    </div>
-                    <div class="floating-symbol">🔏 · locked</div>
-                </div>
-                <div class="memory-card" style="flex:1; min-width: 200px;">
-                    <div class="card-icon">📜</div>
-                    <div class="card-title">private archive</div>
-                    <div class="card-desc">
-                        <span>encrypted emotions, safe</span>
-                    </div>
-                    <div class="floating-symbol">🛡️ · zero‑access</div>
-                </div>
-            </div>
-
-            <!-- Footer -->
-            <div class="vault-footer">
-                <div class="security-badge">
-                    <span>🕊️</span> <span>soul‑secure encryption</span> <span style="font-size: 1rem;">🛡️</span>
-                </div>
-                <div class="time-capsule">
-                    <span class="hour-marker"></span>
-                    <span class="hour-marker" style="background: rgba(255, 255, 255, 0.4); width: 50px;"></span>
-                    <span class="hour-marker"></span>
-                    <span style="margin-left: 0.5rem;" id="timeMood">nightfall · lavender</span>
-                </div>
-                <div class="breath-hint">
-                    <span>𓇻</span> memory breathes
-                </div>
-            </div>
-            <div class="note"
-                style="text-align: center; margin-top: 1rem; color: rgba(255,255,255,0.3); font-size: 0.7rem;">every
-                color holds an emotion · vault private</div>
         </div>
     </div>
 
